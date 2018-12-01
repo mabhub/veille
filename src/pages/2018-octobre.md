@@ -161,15 +161,17 @@ pour sa communication et son image a fait créer par le fondeur
 **Inria Serif**.
 
 Chacune d'entre elle dispose de 3 graisses différentes, et des variantes
-italiques correspondantes.
+italiques correspondantes. Vous pouvez les trouver sur
+[Github][Github InriaFonts] et sur le [site du fondeur][].
 
 Conformément à ses valeurs, l'[Inria][] a placé cette famille de polices
-sous [licence libre][Licence SIL].  Vous pouvez donc utiliser ces
-polices sans modération !
+sous [licence libre][Licence SIL].  Utilisez-les sans modération !
 
 [BlackFoundry]: https://black-foundry.com/ "Black Foundry"
+[Github InriaFonts]: https://github.com/BlackFoundry/InriaFonts	"Inria Sans and Inria Serif"
+[site du fondeur]: https://black-foundry.com/blog/inria-serif-and-inria/	"Inria Serif and Inria Sans"
 [Inria]: https://www.inria.fr/ "Institut national de recherche en informatique et en automatique"
-[Licence SIL]: https://github.com/BlackFoundry/InriaFonts/blob/master/LICENSE.txt
+[Licence SIL]: https://github.com/BlackFoundry/InriaFonts/blob/master/LICENSE.txt	"SIL Open Font License 1.1"
 
 ## math-as-code
 
