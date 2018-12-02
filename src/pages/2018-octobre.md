@@ -156,7 +156,7 @@ leurs produits [Atom][] et [Github Desktop][].
 
 L'<abbr title="Institut national de recherche en informatique et en automatique">Inria</abbr>
 pour sa communication et son image a fait créer par le fondeur
-[Black&#91;Foundry&#93;][BlackFoundry] une famille de
+[Black[Foundry]][BlackFoundry] une famille de
 **polices de caractères**, constituée de membres  **Inria Sans** et de
 **Inria Serif**.
 
