@@ -7,6 +7,14 @@ module.exports = {
   },
   plugins: [
     {
+      resolve: 'gatsby-plugin-matomo',
+      options: {
+        siteId: '3',
+        matomoUrl: 'https://piwik.dediboite.fr',
+        siteUrl: 'https://veille.dediboite.fr/',
+      },
+    },
+    {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: `${__dirname}/src/pages`,
