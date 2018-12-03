@@ -69,6 +69,41 @@ function log (format, ...args) {
 [Sophie Alpert]: https://sophiebits.com/
 [une astuce]: https://twitter.com/sophiebits/status/1058448900460138497
 
+### Flowchart
+
+On ne présente plus [xkcd][], la bande dessinée en ligne de [Randall Munroe][].
+
+Voici l'une de ses publications proposant un **[arbre de décision][]**. Il permet de retrouver à partir de différents détails, l'age d'une carte qu'on a sous les yeux.
+
+[xkcd]: https://xkcd.com
+[Randall Munroe]: https://fr.wikipedia.org/wiki/Randall_Munroe
+[arbre de décision]: https://xkcd.com/1688/
+
+## Incomplete List of Mistakes in the Design of CSS
+
+Il y a sur le [wiki][CSSWG Wiki] du [CSS Working Group][] une [liste (incomplète) des **erreurs de conception du CSS**][CSS Mistakes].
+
+Elle représente un *mea culpa* du W3C sur de nombreux détails curieux, d'absurdités, d'incohérence dont certains mots clés, certaines règles, certains comportements ont été définis dans les spécifications du CSS. Morceaux choisis :
+
+- La propriété `box-sizing` aurait dû avoir la valeur `border-box` par défaut.
+- `border-radius` aurait dû se nommer `corner-radius`.
+- `text-overflow` devrait s'appliquer indépendamment de la propriété `overflow`.
+- …
+
+[CSSWG Wiki]: https://wiki.csswg.org
+[CSS Working Group]: https://en.wikipedia.org/wiki/CSS_Working_group
+[CSS Mistakes]: https://wiki.csswg.org/ideas/mistakes "Incomplete List of Mistakes in the Design of CSS"
+
+## Git happens!
+
+Un oubli lors d'un *commit*, une branche mal nommée… Gitlab propose sur son blog [un petit article][Git happens!] présentant **6 erreurs communes avec Git** et les commandes pour s'en sortir.
+
+[Git happens!]: https://about.gitlab.com/2018/08/08/git-happens/
+
+## Save it now, read it later
+
+Github a récemment ajouté à son interface de notification, un moyen de mettre de côté certaines notifications. Ainsi rangées dans un dossier 	*Saved for later*, on peut sans souci marquer
+
 
 
 
