@@ -4,8 +4,6 @@ date: "2018-12-02"
 
 ---
 
-*Work in progress…*
-
 ## React 16.6
 
 Première actu depuis la dernière édition : la sortie le 23 octobre de
@@ -104,7 +102,13 @@ Un oubli lors d'un *commit*, une branche mal nommée… Gitlab propose sur son b
 
 Github a récemment ajouté à son interface de notification, un moyen de mettre de côté certaines notifications. Ainsi rangées dans un dossier 	*Saved for later*, on peut sans souci marquer
 
+## .gitignore
 
+Petit rappel fait par **[Brian Goff sur Twitter][.gitignore]** :
 
+> .gitignore for a repo should contain things that are produced by build scripts in the repo that you don’t want to commit.
+>
+> Everything else, e.g. IDE generated files, macOS .DS_STORE files, etc, should go in your own global gitignore.
 
+[.gitignore]: https://twitter.com/cpuguy83/status/1057352606123606016
 
