@@ -1,6 +1,6 @@
 ---
 title: Pour commencer
-date: "2018-11-29"
+date: "2018-10-01"
 ---
 
 L'objectif initial des publications à venir est de mettre quelques mots

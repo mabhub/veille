@@ -1,6 +1,6 @@
 ---
 title: Octobre 2018
-date: "2018-12-02"
+date: "2018-10-02"
 ---
 
 Beaucoup de JavaScript, un soupçon de Git, et des outils bien pratiques.
