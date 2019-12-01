@@ -10,7 +10,8 @@ date: "2018-12-03"
 Call stask, types primitifs, fonction pure, promesses… le JavaScript regorge de
 concepts qui ne sont pas toujours évident à comprendre ou à expliquer. Ce
 **[article sous forme d'un README](https://github.com/leonardomso/33-js-concepts)**
-de dépôt Github offre pour chaque concept une liste de ressource permettant de mieux les comprendre.
+de dépôt Github offre pour chaque concept une liste de ressource permettant de
+mieux les comprendre.
 
 ### An Unforgettable Way to Learn Redux
 
@@ -38,6 +39,10 @@ expliquant en
 **[détails les différentes](https://blog.npmjs.org/post/180565383195/details-about-the-event-stream-incident)**
 étapes de cet incident (chronologie et fonctionnement).
 
-Cet **[autre article](https://schneid.io/blog/event-stream-vulnerability-explained/)** creuse un peu plus loin encore les différents aspects de l'évènement.
+Cet **[autre article](https://schneid.io/blog/event-stream-vulnerability-explained/)**
+creuse un peu plus loin encore les différents aspects de l'évènement.
 
-Indépendamment des paramètres technique, ce qu'il s'est passé autour de ce package NPM pose de vraie questions sur les charges et responsabilités qu'impliquent le maintien et l'utilisation de modules, librairies Javascript populaires.
+Indépendamment des paramètres technique, ce qu'il s'est passé autour de ce
+package NPM pose de vraie questions sur les charges et responsabilités
+qu'impliquent le maintien et l'utilisation de modules, librairies Javascript
+populaires.

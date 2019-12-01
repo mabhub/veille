@@ -168,10 +168,10 @@ Conformément à ses valeurs, l'[Inria][] a placé cette famille de polices
 sous [licence libre][Licence SIL].  Utilisez-les sans modération !
 
 [BlackFoundry]: https://black-foundry.com/ "Black Foundry"
-[Github InriaFonts]: https://github.com/BlackFoundry/InriaFonts	"Inria Sans and Inria Serif"
-[site du fondeur]: https://black-foundry.com/blog/inria-serif-and-inria/	"Inria Serif and Inria Sans"
+[Github InriaFonts]: https://github.com/BlackFoundry/InriaFonts "Inria Sans and Inria Serif"
+[site du fondeur]: https://black-foundry.com/blog/inria-serif-and-inria/ "Inria Serif and Inria Sans"
 [Inria]: https://www.inria.fr/ "Institut national de recherche en informatique et en automatique"
-[Licence SIL]: https://github.com/BlackFoundry/InriaFonts/blob/master/LICENSE.txt	"SIL Open Font License 1.1"
+[Licence SIL]: https://github.com/BlackFoundry/InriaFonts/blob/master/LICENSE.txt "SIL Open Font License 1.1"
 
 ## math-as-code
 
@@ -181,20 +181,3 @@ lignes de JavaScript, des notions et **notations mathématiques** parfois
 complexes à aborder.
 
 [math-as-code]: https://github.com/Jam3/math-as-code
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

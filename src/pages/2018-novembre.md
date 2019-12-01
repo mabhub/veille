@@ -25,7 +25,6 @@ déclaration statique de `contextType` facilitant la consommation de
 [HOC]: https://reactjs.org/docs/higher-order-components.html "Higher-Order Components"
 [Context]: https://reactjs.org/docs/context.html
 
-
 ## The Platform
 
 Alors que React 16.6 vient tout juste de sortir, une pre-release de la
@@ -35,7 +34,7 @@ version 16.7 nous a présenté les [Hooks][].
 hooks pour rentre facilement accessibles certaines API Web, aux
 applications React.
 
-[Hooks]: https://reactjs.org/docs/hooks-intro.html	"Introducing Hooks"
+[Hooks]: https://reactjs.org/docs/hooks-intro.html "Introducing Hooks"
 [The Platform]: https://github.com/palmerhq/the-platform
 
 ## Naviguer dans le monde sinistre de JavaScript
@@ -71,7 +70,9 @@ function log (format, ...args) {
 
 On ne présente plus [xkcd][], la bande dessinée en ligne de [Randall Munroe][].
 
-Voici l'une de ses publications proposant un **[arbre de décision][]**. Il permet de retrouver à partir de différents détails, l'age d'une carte qu'on a sous les yeux.
+Voici l'une de ses publications proposant un **[arbre de décision][]**. Il
+permet de retrouver à partir de différents détails, l'age d'une carte qu'on a
+sous les yeux.
 
 [xkcd]: https://xkcd.com
 [Randall Munroe]: https://fr.wikipedia.org/wiki/Randall_Munroe
@@ -79,9 +80,12 @@ Voici l'une de ses publications proposant un **[arbre de décision][]**. Il perm
 
 ## Incomplete List of Mistakes in the Design of CSS
 
-Il y a sur le [wiki][CSSWG Wiki] du [CSS Working Group][] une [liste (incomplète) des **erreurs de conception du CSS**][CSS Mistakes].
+Il y a sur le [wiki][CSSWG Wiki] du [CSS Working Group][] une
+[liste (incomplète) des **erreurs de conception du CSS**][CSS Mistakes].
 
-Elle représente un *mea culpa* du W3C sur de nombreux détails curieux, d'absurdités, d'incohérence dont certains mots clés, certaines règles, certains comportements ont été définis dans les spécifications du CSS. Morceaux choisis :
+Elle représente un *mea culpa* du W3C sur de nombreux détails curieux,
+d'absurdités, d'incohérence dont certains mots clés, certaines règles, certains
+comportements ont été définis dans les spécifications du CSS. Morceaux choisis :
 
 - La propriété `box-sizing` aurait dû avoir la valeur `border-box` par défaut.
 - `border-radius` aurait dû se nommer `corner-radius`.
@@ -94,21 +98,26 @@ Elle représente un *mea culpa* du W3C sur de nombreux détails curieux, d'absur
 
 ## Git happens!
 
-Un oubli lors d'un *commit*, une branche mal nommée… Gitlab propose sur son blog [un petit article][Git happens!] présentant **6 erreurs communes avec Git** et les commandes pour s'en sortir.
+Un oubli lors d'un *commit*, une branche mal nommée… Gitlab propose sur son blog
+[un petit article][Git happens!] présentant **6 erreurs communes avec Git** et
+les commandes pour s'en sortir.
 
 [Git happens!]: https://about.gitlab.com/2018/08/08/git-happens/
 
 ## Save it now, read it later
 
-Github a récemment ajouté à son interface de notification, un moyen de mettre de côté certaines notifications. Ainsi rangées dans un dossier 	*Saved for later*, on peut sans souci marquer
+Github a récemment ajouté à son interface de notification, un moyen de mettre de
+côté certaines notifications. Ainsi rangées dans un dossier *Saved for later*,
+on peut sans souci marquer
 
 ## .gitignore
 
 Petit rappel fait par **[Brian Goff sur Twitter][.gitignore]** :
 
-> .gitignore for a repo should contain things that are produced by build scripts in the repo that you don’t want to commit.
+> .gitignore for a repo should contain things that are produced by build scripts
+> in the repo that you don’t want to commit.
 >
-> Everything else, e.g. IDE generated files, macOS .DS_STORE files, etc, should go in your own global gitignore.
+> Everything else, e.g. IDE generated files, macOS .DS_STORE files, etc, should
+> go in your own global gitignore.
 
 [.gitignore]: https://twitter.com/cpuguy83/status/1057352606123606016
-
