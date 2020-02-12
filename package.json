@@ -41,9 +41,8 @@
     "eslint-plugin-react": "~7.17.0"
   },
   "scripts": {
-    "dev": "gatsby develop",
     "lint": "eslint --ext .js,.jsx --ignore-pattern public .",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "clean": "gatsby clean",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build"
