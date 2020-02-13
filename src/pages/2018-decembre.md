@@ -42,7 +42,7 @@ expliquant en
 Cet **[autre article](https://schneid.io/blog/event-stream-vulnerability-explained/)**
 creuse un peu plus loin encore les différents aspects de l'évènement.
 
-Indépendamment des paramètres technique, ce qu'il s'est passé autour de ce
+Indépendamment des paramètres techniques, ce qu'il s'est passé autour de ce
 package NPM pose de vraie questions sur les charges et responsabilités
 qu'impliquent le maintien et l'utilisation de modules, librairies Javascript
 populaires.

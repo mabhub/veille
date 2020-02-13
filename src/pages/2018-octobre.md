@@ -53,7 +53,7 @@ Lorsque, donc, la manipulation des dates n'est pas le cœur de
 l'application ou du site, il peut être pertinent de **se passer de**
 **Moment.js** pour privilégier d'autres solutions. Soit en utilisant une
 bibliothèque alternative plus légère, qui n'aura peut-être pas le même
-*scope* fonctionnel, soit en restant sur du code natif.
+ensemble de fonctionnalités, soit en restant sur du code natif.
 
 **[You don't (may not) need Moment.js][YDNM]** propose de comparer de
 multiples situations, les différentes manières de les aborder et les
