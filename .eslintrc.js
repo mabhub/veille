@@ -8,8 +8,4 @@ module.exports = {
     'graphql': false,
     '__PATH_PREFIX__': true,
   },
-  rules: {
-    'react/prefer-stateless-function': [off],
-    'import/extensions': [warn, 'ignorePackages'],
-  }
 };

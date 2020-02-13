@@ -8,7 +8,6 @@ Theme.overrideThemeStyles = () => ({
 });
 
 
-
 const typography = new Typography(Theme);
 
 // Hot reload typography in development.
