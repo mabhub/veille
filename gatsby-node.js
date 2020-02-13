@@ -38,7 +38,7 @@ exports.createPages = async ({ graphql, actions: { createPage } }) => {
   edges.forEach(({ node: { fields: { slug } } }, index, posts) =>
     createPage({
       path: slug,
-      component: path.resolve('./src/templates/blog-post.js'),
+      component: path.resolve('./src/components/BlogPostPage.js'),
       context: { slug, ...getSiblings(posts, index) },
     }));
 };

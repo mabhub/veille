@@ -2,10 +2,10 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 
-import Layout from '../components/Layout';
+import Layout from './Layout';
 import { rhythm, scale } from '../utils/typography';
 
-const BlogPostTemplate = ({
+const BlogPostPage = ({
   location,
   data: { markdownRemark: post, site: { siteMetadata: { title: siteTitle } } },
   pageContext: { previous, next },
@@ -67,7 +67,7 @@ const BlogPostTemplate = ({
   </Layout>
 );
 
-export default BlogPostTemplate;
+export default BlogPostPage;
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
