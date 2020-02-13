@@ -4,7 +4,7 @@ import React from 'react';
 import 'typeface-montserrat';
 import 'typeface-merriweather';
 
-import profilePic from './profile-pic.png';
+import profilePic from '../assets/profile-pic.png';
 import { rhythm } from '../utils/typography';
 
 const Bio = () => (
