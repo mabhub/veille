@@ -72,11 +72,9 @@ export default BlogPostPage;
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
-      siteMetadata {
-        title
-        author
-      }
+      siteMetadata { title }
     }
+
     markdownRemark(fields: { slug: { eq: $slug } }) {
       id
       excerpt
