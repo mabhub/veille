@@ -97,8 +97,9 @@ l'interface, ou bien via la touche **R**.
 ### Mosaïque
 
 Dès lors qu'il y a plus de 3 participants et qu'il n'y a rien à *voir* (pas de
-diffusion vidéo). La **mode mosaïque** est accessible via un bouton en bas à
-droite de l'interface.
+diffusion vidéo), le **mode mosaïque**, accessible via un bouton en bas à
+droite de l'interface, permet de se rendre compte plus facilement de qui
+s'exprime à quelle moment.
 
 [^1]: En interne, [Electron][] utilise un pseudo-Chromium.  
       Pour plus de détail, voir le site d'[Electron][]
