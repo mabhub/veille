@@ -103,8 +103,10 @@ s'exprime à quelle moment.
 
 [^1]: En interne, [Electron][] utilise un pseudo-Chromium.  
       Pour plus de détail, voir le site d'[Electron][]
+
 [^2]: À condition de soit activée la fonctionnalité *External API* sur le
       serveur.
+
 [^3]: Ce réglage n'est disponible qu'en dehors du mode peer-to-peer qui s'active
       automatiquement lorsqu'il n'y a que deux participants.
 
