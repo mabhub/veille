@@ -1,9 +1,9 @@
 module.exports = {
   siteMetadata: {
-    title: 'Veille techno',
+    title: 'Notes',
     author: 'Benjamin Marguin',
-    description: 'Un blog de veille technologique',
-    siteUrl: 'https://veille.dediboite.fr/',
+    description: 'Un site avec des choses écrites',
+    siteUrl: 'https://notes.dediboite.fr/',
   },
   plugins: [
     {
@@ -11,7 +11,7 @@ module.exports = {
       options: {
         siteId: '3',
         matomoUrl: 'https://piwik.dediboite.fr',
-        siteUrl: 'https://veille.dediboite.fr/',
+        siteUrl: 'https://notes.dediboite.fr/',
       },
     },
     {
@@ -47,8 +47,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Veille techno',
-        short_name: 'Veille',
+        name: 'Notes',
+        short_name: 'Notes',
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#663399',

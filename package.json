@@ -1,7 +1,7 @@
 {
-  "name": "veille",
+  "name": "notes",
   "private": true,
-  "description": "Un blog de veille technologique",
+  "description": "Un site avec des choses écrites",
   "version": "0.1.0",
   "author": "Benjamin Marguin <benjamin.marguin@makina-corpus.com>",
   "dependencies": {
