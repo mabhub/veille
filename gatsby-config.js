@@ -3,7 +3,7 @@ module.exports = {
     title: 'Notes',
     author: 'Benjamin Marguin',
     description: 'Un site avec des choses écrites',
-    siteUrl: 'https://notes.dediboite.fr/',
+    siteUrl: 'https://notes.dediboite.fr',
   },
   plugins: [
     // {
@@ -60,6 +60,15 @@ module.exports = {
           {
             resolve: 'gatsby-remark-responsive-iframe',
             options: { wrapperStyle: 'margin-bottom: 1.0725rem' },
+          },
+          {
+            resolve: 'gatsby-remark-twitter-cards',
+            options: {
+              title: 'notes.dediboite.fr',
+              background: '#fafafa',
+              fontColor: '#333333',
+              fontFile: require.resolve('./fonts/SourceSansPro-Light.ttf'),
+            },
           },
           'gatsby-remark-autolink-headers',
           'gatsby-remark-prismjs',

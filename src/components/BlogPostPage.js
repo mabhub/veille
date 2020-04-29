@@ -7,13 +7,25 @@ import { rhythm, scale } from '../utils/typography';
 
 const BlogPostPage = ({
   location,
-  data: { markdownRemark: post, site: { siteMetadata: { title: siteTitle } } },
+  data: { markdownRemark: post, site: { siteMetadata: { title: siteTitle, siteUrl } } },
   pageContext: { previous, next },
 }) => (
   <Layout location={location} title={siteTitle}>
     <Helmet
       htmlAttributes={{ lang: 'fr' }}
-      meta={[{ name: 'description', content: post.excerpt }]}
+      meta={[
+        { name: 'description', content: post.excerpt },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:site', content: '@mab_' },
+
+        { name: 'og:type', content: 'article' },
+
+        { name: 'twitter:title', content: post.frontmatter.title },
+        { name: 'og:title', content: post.frontmatter.title },
+
+        { name: 'twitter:image', content: `${siteUrl}${location.pathname}twitter-card.jpg` },
+        { name: 'og:image', content: `${siteUrl}${location.pathname}twitter-card.jpg` },
+      ]}
       title={`${post.frontmatter.title} | ${siteTitle}`}
     />
 
@@ -72,7 +84,7 @@ export default BlogPostPage;
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
-      siteMetadata { title }
+      siteMetadata { title siteUrl }
     }
 
     markdownRemark(fields: { slug: { eq: $slug } }) {
