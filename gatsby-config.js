@@ -6,14 +6,14 @@ module.exports = {
     siteUrl: 'https://notes.dediboite.fr/',
   },
   plugins: [
-    {
-      resolve: 'gatsby-plugin-matomo',
-      options: {
-        siteId: '3',
-        matomoUrl: 'https://piwik.dediboite.fr',
-        siteUrl: 'https://notes.dediboite.fr/',
-      },
-    },
+    // {
+    //   resolve: 'gatsby-plugin-matomo',
+    //   options: {
+    //     siteId: '3',
+    //     matomoUrl: 'https://piwik.dediboite.fr',
+    //     siteUrl: 'https://notes.dediboite.fr/',
+    //   },
+    // },
     {
       resolve: 'gatsby-source-filesystem',
       options: {
