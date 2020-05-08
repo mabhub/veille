@@ -76,6 +76,21 @@ const BlogPostPage = ({
         )}
       </li>
     </ul>
+
+    <aside
+      style={{ textAlign: 'center', opacity: 0.5 }}
+    >
+      <a
+        href={`https://github.com/mabhub/veille/blob/master/src/pages/${post.parent.base}`}
+        style={{ display: 'inline-block' }}
+      >
+        <img
+          src="/github.svg"
+          alt="Voir la source sur Github"
+          style={{ width: '1em', margin: 0, display: 'block' }}
+        />
+      </a>
+    </aside>
   </Layout>
 );
 
@@ -94,6 +109,12 @@ export const pageQuery = graphql`
       frontmatter {
         title
         date(formatString: "MMMM DD, YYYY")
+      }
+
+      parent {
+        ... on File {
+          base
+        }
       }
     }
   }
