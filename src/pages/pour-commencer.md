@@ -20,8 +20,8 @@ Front-End", réunion mensuelle au sein de Makina Corpus qui prend la
 forme d'une sorte de revue de presse, et parfois de retours
 d'experiences autour du développement web **front-end**.
 
-Le fait d'ajouter d'ajouter un commentaire pour chaque lien et de
-publier le tout, reprend également l'idée des *[butinages][]* de Simon.
+Le fait d'ajouter un commentaire pour chaque lien et de publier le tout, reprend
+également l'idée des *[butinages][]* de Simon.
 
 Sans vouloir empiéter sur son considérable travail, celui initié ici est
 plus orienté *front-end* et est un complément moins généraliste.
