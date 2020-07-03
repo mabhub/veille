@@ -6,6 +6,7 @@ module.exports = {
     siteUrl: 'https://notes.dediboite.fr',
   },
   plugins: [
+    'gatsby-plugin-percy',
     // {
     //   resolve: 'gatsby-plugin-matomo',
     //   options: {
