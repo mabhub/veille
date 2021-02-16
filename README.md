@@ -1,5 +1,5 @@
-Comma d'habitude à chaque mise à jour de notre Gitlab, je parcours les notes de
-mise à jour pour voir les nouveautés dont nous bénéficions à present.
+Comme d'habitude à chaque mise à jour de notre Gitlab, je parcours les notes de
+mise à jour pour voir les nouveautés dont nous bénéficions à present. *(merci @mpa !)*
 
 - Gitlab 13.8
   - Plein de nouvelles choses pour faciliter l'utilisation des Pipelines :
@@ -9,7 +9,7 @@ mise à jour pour voir les nouveautés dont nous bénéficions à present.
     - [Visualization of pipeline configuration](https://about.gitlab.com/releases/2021/01/22/gitlab-13-8-released/#visualization-of-pipeline-configuration)
   - [Send an email to an issue](https://about.gitlab.com/releases/2021/01/22/gitlab-13-8-released/#send-an-email-to-an-issue)  
     > Chaque ticket dispose d'une adresse mail unique permettant d'ajouter un nouveau commentaire.  
-    > Cela offre la possibilité, par exemple, de **transferer un mail client** plutôt que de devoir le copier/coller, ou encore de **joindre des fichiers**.
+    > Cela offre la possibilité, par exemple, de **transférer un mail client** plutôt que de devoir le copier/coller, ou encore de **joindre des fichiers**.
   - [Click and drag multiline merge request comments](https://about.gitlab.com/releases/2021/01/22/gitlab-13-8-released/#click-and-drag-multiline-merge-request-comments)  
     > Commenter sur plusieurs lignes en *glissant*.
   <!-- - [Download artifacts directly from the merge request widget](https://about.gitlab.com/releases/2021/01/22/gitlab-13-8-released/#download-artifacts-directly-from-the-merge-request-widget) -->
