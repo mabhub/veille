@@ -1,5 +1,7 @@
 Comme d'habitude à chaque mise à jour de notre Gitlab, je parcours les notes de
-mise à jour pour voir les nouveautés dont nous bénéficions à present. *(merci @mpa !)*
+mise à jour pour voir les nouveautés dont nous bénéficions à présent. *(merci @mpa !)*
+
+En voici un extrait :
 
 - Gitlab 13.8
   - Plein de nouvelles choses pour faciliter l'utilisation des Pipelines :
