@@ -33,6 +33,8 @@ const BlogIndex = ({ data, location }) => {
           </div>
         );
       })}
+
+      <a rel="me" href="https://mastodon.xyz/@mab" style={{ visibility: 'hidden' }}>&nbsp;</a>
     </Layout>
   );
 };
