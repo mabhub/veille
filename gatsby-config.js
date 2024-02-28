@@ -105,7 +105,6 @@ module.exports = {
       },
     },
     // 'gatsby-plugin-offline',
-    'gatsby-plugin-jss',
     'gatsby-plugin-react-helmet',
     {
       resolve: 'gatsby-plugin-typography',
