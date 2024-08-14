@@ -34,6 +34,7 @@ const BlogIndex = ({ data, location }) => {
         );
       })}
 
+      {/* eslint-disable-next-line jsx-a11y/control-has-associated-label */}
       <a rel="me" href="https://mastodon.xyz/@mab" style={{ visibility: 'hidden' }}>&nbsp;</a>
     </Layout>
   );
