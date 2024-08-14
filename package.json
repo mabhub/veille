@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Benjamin Marguin <benjamin.marguin@makina-corpus.com>",
   "dependencies": {
+    "@fontsource/source-sans-pro": "^5.0.8",
     "eslint-config-makina": "^4.0.0",
     "gatsby": "^5.13.7",
     "gatsby-plugin-feed": "^5.13.1",
