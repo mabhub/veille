@@ -13,7 +13,7 @@ const BlogIndex = ({ data, location }) => {
   return (
     <Layout location={location} title={siteTitle}>
       <Helmet
-        htmlAttributes={{ lang: 'en' }}
+        htmlAttributes={{ lang: 'fr' }}
         meta={[{ name: 'description', content: siteDescription }]}
         title={siteTitle}
       />
