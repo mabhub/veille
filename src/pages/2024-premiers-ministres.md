@@ -3,21 +3,28 @@ title: Petit exercice futile de traitement de données
 date: "2024-12-04"
 ---
 
-L'actualité politique aidant, nous nous sommes retrouvés à nous interoger sur les durées d'exercices de nos différents chefs du gouvernement.
+L'actualité politique aidant, nous nous sommes retrouvés à nous interroger sur
+les durées d'exercices de nos différents chefs du gouvernement.
 
-Données de base nécessaires : un inventaire des premiers ministres, accompagné de leurs dates de début et de fin de fonction.
-Malheureusement, l'absence d'un jeu de données exploitable sur [data.gouv.fr](https://www.data.gouv.fr/fr/) nous contraint à le constituer nous-mêmes.
+Données de base nécessaires : un inventaire des premiers ministres, accompagné
+de leurs dates de début et de fin de fonction. Malheureusement, l'absence d'un
+jeu de données exploitable sur [data.gouv.fr](https://www.data.gouv.fr/fr/) nous
+contraint à le constituer nous-mêmes.
 
-Sur le site d'informations du gouvernement, on trouve cette page : 
-[Les anciens Premiers et Premières ministres de la Ve République](https://www.info.gouv.fr/les-anciens-premiers-et-premieres-ministres-de-la-ve-republique)
+Sur le site d'informations du gouvernement, on trouve cette page : [Les anciens
+Premiers et Premières ministres de la Ve
+République](https://www.info.gouv.fr/les-anciens-premiers-et-premieres-ministres-de-la-ve-republique)
 
-La liste présente une structure suffisamment régulière pour permettre une extraction méthodique des informations recherchées.
+La liste présente une structure suffisamment régulière pour permettre une
+extraction méthodique des informations recherchées.
 
 ## Extraire les données brutes
 
-Via la **console** des outils de développement du navigateur web (accessible généralement par la touche F12) il est possible d'exécuter des fragments de JavaScript.
+Via la **console** des outils de développement du navigateur web (accessible
+généralement par la touche F12) il est possible d'exécuter des fragments de
+JavaScript.
 
-On peut ainsi exécuter la commande suivante : 
+On peut ainsi exécuter la commande suivante :
 
 ```js
 // Sélectionne les éléments de la page contenant chaque ancien premier ministre
@@ -50,9 +57,10 @@ console.log(donnéesBrutes);
 
 ## Produire des données numériques
 
-L'étape suivante va être de transformer le texte contenant les dates de début et fin, en des valeurs numériques exploitables.
+L'étape suivante va être de transformer le texte contenant les dates de début et
+fin, en des valeurs numériques exploitables.
 
-Voici déjà une fonction qui permet de transformer chaque date textuelle : 
+Voici déjà une fonction qui permet de transformer chaque date textuelle :
 
 ```js
 const obtenirTimestamp = dateEnFrançais => {
@@ -72,14 +80,14 @@ const obtenirTimestamp = dateEnFrançais => {
 
   const jour = parseInt(match[1], 10);
   const mois = moisFrançais.indexOf(match[2].toLowerCase());
-  const annee = parseInt(match[3], 10);
+  const année = parseInt(match[3], 10);
 
   if (mois === -1) {
     throw new Error('Mois invalide');
   }
 
   // Créer une instance de Date
-  const date = new Date(annee, mois, jour);
+  const date = new Date(année, mois, jour);
 
   // Retourner le timestamp
   return date.getTime();
@@ -87,7 +95,8 @@ const obtenirTimestamp = dateEnFrançais => {
 
 ```
 
-Puis la fonction qui permettra de transformer la différence de *timestamp* en une représentation textuelle de cette durée  : 
+Puis la fonction qui permettra de transformer la différence de *timestamp* en
+une représentation textuelle de cette durée :
 
 ```js
 const timestampEnTexte = timestamp => {
@@ -119,7 +128,7 @@ const timestampEnTexte = timestamp => {
 
 ## Déterminer les durées de mandats
 
-Nous pouvons donc ensuite les appliquer sur nos données : 
+Nous pouvons donc ensuite les appliquer sur nos données :
 
 ```js
 const donnéesTraités = donnéesBrutes.map(ministre => {
@@ -163,7 +172,8 @@ console.log(donnéesTraités);
 ]
 ```
 
-Il est possible de récupérer le résultat au format JSON dans le presse papier ainsi : 
+Il est possible de récupérer le résultat au format JSON dans le presse papier
+ainsi :
 
 ```js
 copy(JSON.stringify(donnéesTraités, null, 2));
@@ -171,8 +181,11 @@ copy(JSON.stringify(donnéesTraités, null, 2));
 
 ## Afficher le résultat
 
-Il y a de nombreuses possibilités pour faire un rendu lisibles des données produites.  
-Actuellement nous explorons les possibilité offertes par [DuckDB](https://duckdb.org/), nous vous proposons donc de l'utiliser pour simplement afficher nos données :
+Il y a de nombreuses possibilités pour faire un rendu lisible des données
+produites.  
+Actuellement nous explorons les possibilités offertes par
+[DuckDB](https://duckdb.org/), nous vous proposons donc de l'utiliser pour
+simplement afficher nos données :
 
 
 ```sql
@@ -204,7 +217,7 @@ SELECT * from 'premier_ministres.json' ORDER BY écart;
 | Pierre Bérégovoy          | 2 avril 1992    | 29 mars 1993      | 31190400000  | 11 mois, 26 jours           |
 ```
 
-Et même de l'extraire vers un fichier au format CSV : 
+Et même de l'extraire vers un fichier au format CSV :
 
 ```sql
 COPY (SELECT * from 'premier_ministres.json' ORDER BY écart) TO 'premier_ministres.csv';
