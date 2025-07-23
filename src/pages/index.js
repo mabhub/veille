@@ -1,23 +1,15 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import { Helmet } from 'react-helmet';
 
 import Layout from '../components/Layout';
 import { rhythm } from '../utils/typography';
 
 const BlogIndex = ({ data, location }) => {
   const siteTitle = data.site.siteMetadata.title;
-  const siteDescription = data.site.siteMetadata.description;
   const posts = data.allMarkdownRemark.edges;
 
   return (
     <Layout location={location} title={siteTitle}>
-      <Helmet
-        htmlAttributes={{ lang: 'fr' }}
-        meta={[{ name: 'description', content: siteDescription }]}
-        title={siteTitle}
-      />
-
       {posts.map(({ node }) => {
         const title = node.frontmatter.title || node.fields.slug;
         return (
@@ -41,6 +33,14 @@ const BlogIndex = ({ data, location }) => {
 };
 
 export default BlogIndex;
+
+export const Head = ({ data }) => (
+  <>
+    <html lang="fr" />
+    <title>{data.site.siteMetadata.title}</title>
+    <meta name="description" content={data.site.siteMetadata.description} />
+  </>
+);
 
 export const pageQuery = graphql`
   query {

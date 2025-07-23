@@ -1,5 +1,4 @@
 import React from 'react';
-import { Helmet } from 'react-helmet';
 import { Link, graphql } from 'gatsby';
 
 import Layout from './Layout';
@@ -7,28 +6,10 @@ import { rhythm, scale } from '../utils/typography';
 
 const BlogPostPage = ({
   location,
-  data: { markdownRemark: post, site: { siteMetadata: { title: siteTitle, siteUrl } } },
+  data: { markdownRemark: post, site: { siteMetadata: { title: siteTitle } } },
   pageContext: { previous, next },
 }) => (
   <Layout location={location} title={siteTitle}>
-    <Helmet
-      htmlAttributes={{ lang: 'fr' }}
-      meta={[
-        { name: 'description', content: post.excerpt },
-        { name: 'twitter:card', content: 'summary_large_image' },
-        { name: 'twitter:site', content: '@mab_' },
-
-        { name: 'og:type', content: 'article' },
-
-        { name: 'twitter:title', content: post.frontmatter.title },
-        { name: 'og:title', content: post.frontmatter.title },
-
-        { name: 'twitter:image', content: `${siteUrl}${location.pathname}twitter-card.jpg` },
-        { name: 'og:image', content: `${siteUrl}${location.pathname}twitter-card.jpg` },
-      ]}
-      title={`${post.frontmatter.title} | ${siteTitle}`}
-    />
-
     <h1>{post.frontmatter.title}</h1>
 
     <p
@@ -95,6 +76,24 @@ const BlogPostPage = ({
 );
 
 export default BlogPostPage;
+
+export const Head = ({
+  location,
+  data: { markdownRemark: post, site: { siteMetadata: { title: siteTitle, siteUrl } } },
+}) => (
+  <>
+    <html lang="fr" />
+    <title>{`${post.frontmatter.title} | ${siteTitle}`}</title>
+    <meta name="description" content={post.excerpt} />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@mab_" />
+    <meta name="og:type" content="article" />
+    <meta name="twitter:title" content={post.frontmatter.title} />
+    <meta name="og:title" content={post.frontmatter.title} />
+    <meta name="twitter:image" content={`${siteUrl}${location.pathname}twitter-card.jpg`} />
+    <meta name="og:image" content={`${siteUrl}${location.pathname}twitter-card.jpg`} />
+  </>
+);
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {

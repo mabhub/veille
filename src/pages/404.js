@@ -9,3 +9,11 @@ const NotFoundPage = ({ location }) => (
 );
 
 export default NotFoundPage;
+
+export const Head = () => (
+  <>
+    <html lang="fr" />
+    <title>404: Not Found</title>
+    <meta name="description" content="Page not found" />
+  </>
+);
