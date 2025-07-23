@@ -14,19 +14,37 @@ const Layout = ({ location, title, children }) => (
       padding: `${rhythm(3 / 2)} ${rhythm(3 / 4)}`,
     }}
   >
-    {(location.pathname === rootPath) && (
-      <h1 style={{ ...scale(1.5) }}>
-        <Link style={{ color: 'inherit' }} to="/">{title}</Link>
-      </h1>
-    )}
+    <header>
+      {(location.pathname === rootPath) && (
+        <h1 style={{ ...scale(1.5) }}>
+          <Link
+            style={{
+              color: 'inherit',
+              textDecoration: 'none',
+            }}
+            to="/"
+            aria-label={`Accueil - ${title}`}
+          >
+            {title}
+          </Link>
+        </h1>
+      )}
 
-    {(location.pathname !== rootPath) && (
-      <h3 style={{ marginBottom: rhythm(-1 / 4) }}>
-        <Link to="/">{title}</Link>
-      </h3>
-    )}
+      {(location.pathname !== rootPath) && (
+        <h3 style={{ marginBottom: rhythm(-1 / 4) }}>
+          <Link
+            to="/"
+            aria-label="Retour à l'accueil"
+          >
+            {title}
+          </Link>
+        </h3>
+      )}
+    </header>
 
-    {children}
+    <main role="main">
+      {children}
+    </main>
   </div>
 );
 

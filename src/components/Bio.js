@@ -1,10 +1,6 @@
 import React from 'react';
+import { StaticImage } from 'gatsby-plugin-image';
 
-// Import typefaces
-import 'typeface-montserrat';
-import 'typeface-merriweather';
-
-import profilePic from '../assets/profile-pic.png';
 import { rhythm } from '../utils/typography';
 
 const Bio = () => (
@@ -14,18 +10,22 @@ const Bio = () => (
       marginBottom: rhythm(2.5),
     }}
   >
-    <img
-      src={profilePic}
-      alt=""
+    <StaticImage
+      src="../assets/profile-pic.png"
+      alt="Photo de profil de Benjamin Marguin"
+      placeholder="blurred"
+      format="auto"
+      quality={95}
+      width={48}
+      height={48}
       style={{
         marginRight: rhythm(1 / 2),
         marginBottom: 0,
-        width: rhythm(2),
-        height: rhythm(2),
+        borderRadius: '50%',
       }}
     />
     <p>
-      {/* Empty bio */}
+      {/* Bio content can be added here */}
     </p>
   </div>
 );

@@ -1,8 +1,8 @@
-import React from 'react';
-import { Link, graphql } from 'gatsby';
-
-import Layout from './Layout';
+import * as React from 'react';
+import { graphql, Link } from 'gatsby';
 import { rhythm, scale } from '../utils/typography';
+import Layout from './Layout';
+import githubIcon from '../assets/github.svg';
 
 const BlogPostPage = ({
   location,
@@ -26,49 +26,88 @@ const BlogPostPage = ({
     {/* eslint-disable-next-line react/no-danger */}
     <div dangerouslySetInnerHTML={{ __html: post.html }} />
 
-    <hr
-      style={{
-        marginBottom: rhythm(1),
-      }}
-    />
+    <nav aria-label="Navigation entre les articles">
+      <hr
+        style={{
+          marginBottom: rhythm(1),
+        }}
+      />
 
-    <ul
-      style={{
-        display: 'flex',
-        flexWrap: 'wrap',
-        justifyContent: 'space-between',
-        listStyle: 'none',
-        padding: 0,
-        marginLeft: 0,
-      }}
-    >
-      <li>
-        {previous && (
-          <Link to={previous.fields.slug} rel="prev">
-            ← {previous.frontmatter.title}
-          </Link>
-        )}
-      </li>
-      <li>
-        {next && (
-          <Link to={next.fields.slug} rel="next">
-            {next.frontmatter.title} →
-          </Link>
-        )}
-      </li>
-    </ul>
+      <ul
+        style={{
+          display: 'flex',
+          flexWrap: 'wrap',
+          justifyContent: 'space-between',
+          listStyle: 'none',
+          padding: 0,
+          marginLeft: 0,
+        }}
+      >
+        <li style={{ flex: '1 1 auto', textAlign: 'left' }}>
+          {previous && (
+            <Link
+              to={previous.fields.slug}
+              rel="prev"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                textDecoration: 'none',
+              }}
+              aria-label={`Article précédent: ${previous.frontmatter.title}`}
+            >
+              <span style={{ marginRight: rhythm(1 / 4) }}>←</span>
+              <div>
+                <div style={{ fontSize: '0.8rem', opacity: 0.7 }}>Précédent</div>
+                <div>{previous.frontmatter.title}</div>
+              </div>
+            </Link>
+          )}
+        </li>
+        <li style={{ flex: '1 1 auto', textAlign: 'right' }}>
+          {next && (
+            <Link
+              to={next.fields.slug}
+              rel="next"
+              style={{
+                display: 'inline-flex',
+                alignItems: 'center',
+                textDecoration: 'none',
+              }}
+              aria-label={`Article suivant: ${next.frontmatter.title}`}
+            >
+              <div>
+                <div style={{ fontSize: '0.8rem', opacity: 0.7 }}>Suivant</div>
+                <div>{next.frontmatter.title}</div>
+              </div>
+              <span style={{ marginLeft: rhythm(1 / 4) }}>→</span>
+            </Link>
+          )}
+        </li>
+      </ul>
+    </nav>
 
     <aside
-      style={{ textAlign: 'center', opacity: 0.5 }}
+      style={{ textAlign: 'center', opacity: 0.5, marginTop: rhythm(2) }}
     >
       <a
         href={`https://github.com/mabhub/veille/blob/master/src/pages/${post.parent.base}`}
-        style={{ display: 'inline-block' }}
+        style={{
+          display: 'inline-flex',
+          alignItems: 'center',
+          gap: rhythm(1 / 4),
+          textDecoration: 'none',
+          color: 'inherit',
+        }}
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Voir la source de cet article sur GitHub"
       >
         <img
-          src="/github.svg"
-          alt="Voir la source sur Github"
-          style={{ width: '1em', margin: 0, display: 'block' }}
+          src={githubIcon}
+          alt=""
+          width="16"
+          height="16"
+          style={{ margin: 0 }}
         />
       </a>
     </aside>
