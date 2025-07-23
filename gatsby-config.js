@@ -104,7 +104,15 @@ module.exports = {
         icon: 'src/assets/directions.svg',
       },
     },
-    // 'gatsby-plugin-offline',
+    'gatsby-plugin-sitemap',
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://notes.dediboite.fr',
+        sitemap: 'https://notes.dediboite.fr/sitemap-index.xml',
+        policy: [{ userAgent: '*', allow: '/' }],
+      },
+    },
     {
       resolve: 'gatsby-plugin-typography',
       options: {
