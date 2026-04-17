@@ -96,7 +96,7 @@ module.exports = {
         mergeScriptHashes: false,
         directives: {
           'default-src': "'self'",
-          'script-src': "'self' 'unsafe-inline' 'unsafe-eval' https://matomo.dediboite.fr",
+          'script-src': "'self' 'unsafe-inline' https://matomo.dediboite.fr",
           'style-src': "'self' 'unsafe-inline'",
           'img-src': "'self' data: https:",
           'font-src': "'self' data:",
