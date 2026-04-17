@@ -1,0 +1,26 @@
+---
+const DIRECTIONS = {
+  prev: { rel: 'prev', label: 'Précédent', aria: 'Article précédent', arrow: '←', align: 'left' },
+  next: { rel: 'next', label: 'Suivant', aria: 'Article suivant', arrow: '→', align: 'right' },
+};
+
+const { direction, post } = Astro.props;
+const meta = DIRECTIONS[direction];
+---
+<li class={`nav-item nav-item--${meta.align}`}>
+  {post && (
+    <a
+      href={`/${post.id}/`}
+      rel={meta.rel}
+      class="nav-link"
+      aria-label={`${meta.aria}: ${post.data.title}`}
+    >
+      {direction === 'prev' && <span class="nav-arrow nav-arrow--prev">{meta.arrow}</span>}
+      <span class="nav-text">
+        <span class="nav-label">{meta.label}</span>
+        <span class="nav-title">{post.data.title}</span>
+      </span>
+      {direction === 'next' && <span class="nav-arrow nav-arrow--next">{meta.arrow}</span>}
+    </a>
+  )}
+</li>

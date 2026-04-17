@@ -1,0 +1,15 @@
+---
+const { title } = Astro.props;
+const isHome = Astro.url.pathname === '/';
+---
+<header>
+  {isHome ? (
+    <h1 class="site-title site-title--home">
+      <a href="/" aria-label={`Accueil - ${title}`}>{title}</a>
+    </h1>
+  ) : (
+    <h3 class="site-title site-title--nested">
+      <a href="/" aria-label="Retour à l'accueil">{title}</a>
+    </h3>
+  )}
+</header>

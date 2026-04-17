@@ -1,0 +1,26 @@
+---
+import { getCollection } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { SITE } from '../consts.js';
+
+const posts = (await getCollection('posts'))
+  .toSorted((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+const dateFormatter = new Intl.DateTimeFormat('fr-FR', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+});
+---
+<BaseLayout title={SITE.title} description={SITE.description}>
+  {posts.map(post => (
+    <article class="post-summary">
+      <h3 class="post-summary__title">
+        <a href={`/${post.id}/`}>{post.data.title}</a>
+      </h3>
+      <small class="post-summary__date">{dateFormatter.format(post.data.date)}</small>
+    </article>
+  ))}
+
+  <a rel="me" href="https://mastodon.xyz/@mab" class="mastodon-webfinger">&nbsp;</a>
+</BaseLayout>

@@ -1,0 +1,60 @@
+---
+import '@fontsource/source-sans-pro/latin-200.css';
+import '@fontsource/source-sans-pro/latin-400.css';
+import '@fontsource/source-sans-pro/latin-400-italic.css';
+import '@fontsource/source-sans-pro/latin-700.css';
+import '@fontsource/source-sans-pro/latin-ext-200.css';
+import '@fontsource/source-sans-pro/latin-ext-400.css';
+import '@fontsource/source-sans-pro/latin-ext-400-italic.css';
+import '@fontsource/source-sans-pro/latin-ext-700.css';
+import '../styles/global.css';
+import '../styles/prose.css';
+
+import Header from '../components/Header.astro';
+import { SITE, MATOMO } from '../consts.js';
+
+const { title, description } = Astro.props;
+const pageTitle = title === SITE.title ? SITE.title : `${title} | ${SITE.title}`;
+const canonical = new URL(Astro.url.pathname, SITE.siteUrl).toString();
+---
+<!doctype html>
+<html lang={SITE.lang}>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description ?? SITE.description} />
+    <link rel="canonical" href={canonical} />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#663399" />
+    <link rel="sitemap" href="/sitemap-index.xml" />
+
+    <script is:inline define:vars={{ matomoUrl: MATOMO.url, siteId: MATOMO.siteId }}>
+      var _paq = window._paq = window._paq || [];
+      _paq.push(['trackPageView']);
+      _paq.push(['enableLinkTracking']);
+      (function () {
+        var u = matomoUrl + '/';
+        _paq.push(['setTrackerUrl', u + 'matomo.php']);
+        _paq.push(['setSiteId', siteId]);
+        var d = document;
+        var g = d.createElement('script');
+        var s = d.getElementsByTagName('script')[0];
+        g.async = true;
+        g.src = u + 'matomo.js';
+        s.parentNode.insertBefore(g, s);
+      })();
+    </script>
+  </head>
+
+  <body>
+    <div class="page">
+      <Header title={SITE.title} />
+      <main role="main">
+        <slot />
+      </main>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,155 @@
+/* Layout + rendered markdown styles. Complements global.css (Moraga base). */
+
+.page {
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 42rem;
+  padding: 2.175rem 1.0875rem;
+}
+
+.site-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.site-title--home {
+  font-size: 3rem;
+  line-height: 1.1;
+}
+
+.site-title--nested {
+  margin-bottom: -0.3625rem;
+}
+
+/* Post summary cards on the index */
+.post-summary {
+  margin-bottom: 1.45rem;
+}
+
+.post-summary__title {
+  margin-bottom: 0.3625rem;
+}
+
+.post-summary__date {
+  display: block;
+  color: hsla(0, 0%, 0%, 0.55);
+}
+
+.mastodon-webfinger {
+  visibility: hidden;
+}
+
+/* Single post */
+.post-date {
+  display: block;
+  font-size: 0.8rem;
+  margin-top: -1.45rem;
+  margin-bottom: 1.45rem;
+  color: hsla(0, 0%, 0%, 0.55);
+}
+
+/* Prose tweaks for rendered markdown content */
+.prose img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.prose pre {
+  padding: 0.725rem 1.0875rem;
+  overflow-x: auto;
+  border-radius: 4px;
+}
+
+.prose code {
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  background: hsla(0, 0%, 0%, 0.05);
+}
+
+.prose pre code {
+  padding: 0;
+  background: transparent;
+}
+
+.prose blockquote {
+  font-style: italic;
+}
+
+/* Autolink headings: leave the appended anchor unobtrusive */
+.prose :is(h1, h2, h3, h4, h5, h6) a[aria-hidden="true"] {
+  margin-left: 0.25em;
+  opacity: 0.35;
+  text-decoration: none;
+}
+
+.prose :is(h1, h2, h3, h4, h5, h6) a[aria-hidden="true"]:hover {
+  opacity: 0.8;
+}
+
+/* Previous/next navigation */
+.post-nav hr {
+  margin-bottom: 1.45rem;
+}
+
+.nav-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+  margin-left: 0;
+}
+
+.nav-item {
+  flex: 1 1 auto;
+}
+
+.nav-item--left {
+  text-align: left;
+}
+
+.nav-item--right {
+  text-align: right;
+}
+
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  text-decoration: none;
+}
+
+.nav-arrow--prev {
+  margin-right: 0.3625rem;
+}
+
+.nav-arrow--next {
+  margin-left: 0.3625rem;
+}
+
+.nav-text {
+  display: inline-flex;
+  flex-direction: column;
+}
+
+.nav-label {
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+
+/* GitHub source link footer */
+.source-aside {
+  text-align: center;
+  opacity: 0.5;
+  margin-top: 2.9rem;
+}
+
+.source-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3625rem;
+  text-decoration: none;
+  color: inherit;
+}

@@ -1,0 +1,48 @@
+---
+import { getCollection, render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import AdjacentPostLink from '../components/AdjacentPostLink.astro';
+import SourceLink from '../components/SourceLink.astro';
+
+export async function getStaticPaths() {
+  const posts = (await getCollection('posts'))
+    .toSorted((a, b) => b.data.date.getTime() - a.data.date.getTime());
+
+  return posts.map((post, index) => ({
+    params: { slug: post.id },
+    props: {
+      post,
+      previous: posts[index + 1] ?? null,
+      next: posts[index - 1] ?? null,
+    },
+  }));
+}
+
+const { post, previous, next } = Astro.props;
+const { Content } = await render(post);
+
+const dateFormatter = new Intl.DateTimeFormat('fr-FR', {
+  day: '2-digit',
+  month: 'long',
+  year: 'numeric',
+});
+const excerpt = post.body?.replace(/\s+/g, ' ').slice(0, 160) ?? '';
+---
+<BaseLayout title={post.data.title} description={excerpt}>
+  <h1>{post.data.title}</h1>
+  <p class="post-date">{dateFormatter.format(post.data.date)}</p>
+
+  <article class="prose">
+    <Content />
+  </article>
+
+  <nav class="post-nav" aria-label="Navigation entre les articles">
+    <hr />
+    <ul class="nav-list">
+      <AdjacentPostLink direction="prev" post={previous} />
+      <AdjacentPostLink direction="next" post={next} />
+    </ul>
+  </nav>
+
+  <SourceLink file={`${post.id}.md`} />
+</BaseLayout>
