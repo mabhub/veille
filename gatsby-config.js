@@ -2,6 +2,7 @@ const siteMetadata = {
   title: 'Notes',
   description: 'Un site avec des choses écrites',
   siteUrl: 'https://notes.dediboite.fr',
+  repoUrl: 'https://github.com/mabhub/veille',
 };
 
 module.exports = {

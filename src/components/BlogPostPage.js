@@ -6,7 +6,7 @@ import githubIcon from '../assets/github.svg';
 
 const BlogPostPage = ({
   location,
-  data: { markdownRemark: post, site: { siteMetadata: { title: siteTitle } } },
+  data: { markdownRemark: post, site: { siteMetadata: { title: siteTitle, repoUrl } } },
   pageContext: { previous, next },
 }) => (
   <Layout location={location} title={siteTitle}>
@@ -90,7 +90,7 @@ const BlogPostPage = ({
       style={{ textAlign: 'center', opacity: 0.5, marginTop: rhythm(2) }}
     >
       <a
-        href={`https://github.com/mabhub/veille/blob/master/src/pages/${post.parent.base}`}
+        href={`${repoUrl}/blob/master/src/pages/${post.parent.base}`}
         style={{
           display: 'inline-flex',
           alignItems: 'center',
@@ -129,7 +129,7 @@ export const Head = ({
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
-      siteMetadata { title }
+      siteMetadata { title repoUrl }
     }
 
     markdownRemark(fields: { slug: { eq: $slug } }) {
