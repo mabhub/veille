@@ -5,3 +5,6 @@ dist/
 .env.production
 .DS_Store
 npm-debug.log*
+
+# Generated PWA icons (run `npm run generate:icons` to rebuild)
+public/icons/
