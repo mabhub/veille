@@ -1,9 +1,6 @@
 ---
 title: Premiers pas avec Jitsi Meet
 date: "2020-04-17"
-themes:
-  - jitsi
-  - covid
 ---
 
 *Dans le contexte actuel, on a de plus en plus l'occasion de communiquer grâce à

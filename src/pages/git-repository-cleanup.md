@@ -1,6 +1,5 @@
 ---
 title: Nettoyer un dépôt Git
-description: Comment nettoyer en profondeur un dépôt Git
 date: "2016-03-17"
 ---
 
