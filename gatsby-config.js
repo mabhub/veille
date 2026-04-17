@@ -1,10 +1,11 @@
+const siteMetadata = {
+  title: 'Notes',
+  description: 'Un site avec des choses écrites',
+  siteUrl: 'https://notes.dediboite.fr',
+};
+
 module.exports = {
-  siteMetadata: {
-    title: 'Notes',
-    author: 'Benjamin Marguin',
-    description: 'Un site avec des choses écrites',
-    siteUrl: 'https://notes.dediboite.fr',
-  },
+  siteMetadata,
   plugins: [
     {
       resolve: 'gatsby-plugin-matomo',
@@ -67,9 +68,9 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: 'Notes - Blog technique de Benjamin Marguin',
-        short_name: 'Notes',
-        description: 'Un site avec des choses écrites - Blog technique et veille technologique',
+        name: siteMetadata.title,
+        short_name: siteMetadata.title,
+        description: siteMetadata.description,
         start_url: '/',
         background_color: '#ffffff',
         theme_color: '#663399',
