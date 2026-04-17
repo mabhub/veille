@@ -23,7 +23,6 @@
     "gatsby-remark-prismjs": "^7.15.0",
     "gatsby-remark-responsive-iframe": "^6.15.0",
     "gatsby-remark-smartypants": "^6.15.0",
-    "gatsby-remark-twitter-cards": "^0.6.1",
     "gatsby-source-filesystem": "^5.15.0",
     "gatsby-transformer-remark": "^6.15.0",
     "gatsby-transformer-sharp": "^5.15.0",

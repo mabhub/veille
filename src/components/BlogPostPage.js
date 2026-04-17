@@ -117,27 +117,19 @@ const BlogPostPage = ({
 export default BlogPostPage;
 
 export const Head = ({
-  location,
-  data: { markdownRemark: post, site: { siteMetadata: { title: siteTitle, siteUrl } } },
+  data: { markdownRemark: post, site: { siteMetadata: { title: siteTitle } } },
 }) => (
   <>
     <html lang="fr" />
     <title>{`${post.frontmatter.title} | ${siteTitle}`}</title>
     <meta name="description" content={post.excerpt} />
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@mab_" />
-    <meta name="og:type" content="article" />
-    <meta name="twitter:title" content={post.frontmatter.title} />
-    <meta name="og:title" content={post.frontmatter.title} />
-    <meta name="twitter:image" content={`${siteUrl}${location.pathname}twitter-card.jpg`} />
-    <meta name="og:image" content={`${siteUrl}${location.pathname}twitter-card.jpg`} />
   </>
 );
 
 export const pageQuery = graphql`
   query BlogPostBySlug($slug: String!) {
     site {
-      siteMetadata { title siteUrl }
+      siteMetadata { title }
     }
 
     markdownRemark(fields: { slug: { eq: $slug } }) {
