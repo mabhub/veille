@@ -12,7 +12,6 @@
     "build": "npm run generate:icons && astro build",
     "preview": "astro preview",
     "astro": "astro",
-    "lint": "eslint . --ext .js,.mjs,.astro",
     "generate:icons": "node scripts/generate-icons.mjs"
   },
   "dependencies": {
