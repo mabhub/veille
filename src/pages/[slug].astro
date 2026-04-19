@@ -1,12 +1,13 @@
 ---
-import { getCollection, render } from 'astro:content';
+import { render } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
 import AdjacentPostLink from '../components/AdjacentPostLink.astro';
 import SourceLink from '../components/SourceLink.astro';
+import { getSortedPosts } from '../utils/posts.js';
+import { DATE_FORMATTER } from '../utils/date.js';
 
 export async function getStaticPaths() {
-  const posts = (await getCollection('posts'))
-    .toSorted((a, b) => b.data.date.getTime() - a.data.date.getTime());
+  const posts = await getSortedPosts();
 
   return posts.map((post, index) => ({
     params: { slug: post.id },
@@ -20,17 +21,11 @@ export async function getStaticPaths() {
 
 const { post, previous, next } = Astro.props;
 const { Content } = await render(post);
-
-const dateFormatter = new Intl.DateTimeFormat('fr-FR', {
-  day: '2-digit',
-  month: 'long',
-  year: 'numeric',
-});
 const excerpt = post.body?.replace(/\s+/g, ' ').slice(0, 160) ?? '';
 ---
 <BaseLayout title={post.data.title} description={excerpt}>
   <h1>{post.data.title}</h1>
-  <p class="post-date">{dateFormatter.format(post.data.date)}</p>
+  <p class="post-date">{DATE_FORMATTER.format(post.data.date)}</p>
 
   <article class="prose">
     <Content />
