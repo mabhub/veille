@@ -10,6 +10,9 @@ import '@fontsource/source-sans-pro/latin-ext-700.css';
 import '../styles/global.css';
 import '../styles/prose.css';
 
+import body400 from '@fontsource/source-sans-pro/files/source-sans-pro-latin-400-normal.woff2?url';
+import heading200 from '@fontsource/source-sans-pro/files/source-sans-pro-latin-200-normal.woff2?url';
+
 import Header from '../components/Header.astro';
 import { SITE, MATOMO } from '../consts.js';
 
@@ -26,6 +29,8 @@ const canonical = new URL(Astro.url.pathname, SITE.siteUrl).toString();
     <title>{pageTitle}</title>
     <meta name="description" content={description ?? SITE.description} />
     <link rel="canonical" href={canonical} />
+    <link rel="preload" as="font" type="font/woff2" href={body400} crossorigin />
+    <link rel="preload" as="font" type="font/woff2" href={heading200} crossorigin />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <link rel="manifest" href="/site.webmanifest" />
     <meta name="theme-color" content="#663399" />
