@@ -21,7 +21,7 @@ export async function getStaticPaths() {
 
 const { post, previous, next } = Astro.props;
 const { Content } = await render(post);
-const excerpt = post.body?.replace(/\s+/g, ' ').slice(0, 160) ?? '';
+const excerpt = post.body.replace(/\s+/g, ' ').slice(0, 160);
 ---
 <BaseLayout title={post.data.title} description={excerpt}>
   <h1>{post.data.title}</h1>
