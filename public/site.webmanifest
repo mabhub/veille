@@ -1,0 +1,15 @@
+{
+  "name": "Notes",
+  "short_name": "Notes",
+  "description": "Un site avec des choses écrites",
+  "start_url": "/",
+  "display": "minimal-ui",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#663399",
+  "icons": [
+    { "src": "/icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "/favicon.svg", "sizes": "any", "type": "image/svg+xml" }
+  ]
+}

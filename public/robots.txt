@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+Host: https://notes.dediboite.fr
+Sitemap: https://notes.dediboite.fr/sitemap-index.xml
