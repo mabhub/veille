@@ -1,0 +1,7 @@
+# Articles retirés du site (frontmatter `draft: true`).
+# Leur URL a déjà été publiée : sans redirection Netlify sert une 404 sèche.
+#
+# 302 = retrait temporaire : l'URL reste indexée et n'est pas mise en cache
+# durablement par les navigateurs, donc republier ne demande que de supprimer
+# la ligne. Passer en 301 seulement si le retrait devient définitif.
+/2025-vieux-con/   /   302

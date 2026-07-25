@@ -1,6 +1,7 @@
 ---
 title: Vieux con
 date: "2025-10-10"
+draft: true
 ---
 
 Cet article a pour but de lister un nombre indéterminé de situations, de
